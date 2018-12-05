@@ -28,9 +28,11 @@ ipcMain.on('showHomePage',(event,arg)=>{
 function createWindow () {
   // Create the browser window.
   loginWindow = new BrowserWindow({
-    width: 480, 
-    height: 800,
+    width: 430, 
+    height: 640,
     show:false,
+    frame:false,
+    resizable:false,
     autoHideMenuBar: true, 
     webPreferences: {
     javascript: true,

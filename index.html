@@ -7,8 +7,13 @@
   <title>ThinkNote -- Client</title>
 </head>
 
-<body style="margin:0px">
-  <script>require('./renderer.js')</script>
+<body style="margin:0px;">
+  <div class="dragger" style="-webkit-app-region:drag;height:10px;position:absolute;width:100vw;">
+    <a href="#" class="close"></a>
+  </div>
+  <script>
+    require('./renderer.js')
+  </script>
   <div id="app"></div>
   <!-- built files will be auto injected -->
 </body>
