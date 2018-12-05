@@ -1,51 +1,60 @@
 <template>
 <div class='side-bar'>
     <table class="side-bar">
-        <td>
+        <td class='bordered_td'>
             <tr>
-                物
+                <notebook abbr='物' color='green'></notebook>
             </tr>
             <tr>
-                DS
+                <notebook abbr='DS' color='blue'></notebook>
             </tr>
             <tr>
-                组
+                <notebook abbr='数' color='pink'></notebook>
             </tr>
         </td>
         <td>
             <tr>
-                Chapter1
+                <notepage title='Chapter1'></notepage>
             </tr>
             <tr>
-                1.1
+                <notepage title='1.1'></notepage>
             </tr>
             <tr>
-                1.2
+                <notepage title='1.2'></notepage>
             </tr>
             <tr>
-                1.3
+                <notepage title='1.3'></notepage>
             </tr>
             <tr>
-                Chapter2
+                <notepage title='Chapter2'></notepage>
             </tr>
             <tr>
-                Chapter3
+                <notepage title='Chapter3'></notepage>
             </tr>
         </td>
     </table>
 </div>
-
 </template>
 <script>
+import notebook from './guidance/notebook.vue'
+import notepage from './guidance/notepage.vue'
 export default {
   name: 'spine',
+  components: {notebook,notepage},
   data () {
     return {
     }
   }
 }
 </script>
-<style lang='css' scope>
+<style>
+/*table { border: none; border-collapse: collapse; }
+table td { border-left: 1px solid #000; }
+table td:first-child { border-left: none; }*/
+.bordered_td {
+    border-right: 2px solid;
+    border-color: white;
+}
 .side-bar {
     height: 100%;
     width: 50px;
