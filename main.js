@@ -1,25 +1,57 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
-
+const {app, BrowserWindow,ipcMain} = require('electron')
+const path = require('path');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
-
+let loginWindow
+function createMainWindow() {
+  mainWindow = new BrowserWindow({
+    width: 1280, 
+    height: 720,
+    autoHideMenuBar: true, 
+    webPreferences: {
+    javascript: true,
+    plugins: true,
+    nodeIntegration: false,
+    webSecurity: false,
+    preload: path.join(__dirname, './renderer.js') 
+  }})
+  mainWindow.loadURL('http://localhost:8080/think/note')
+  mainWindow.show()
+}
+ipcMain.on('showHomePage',(event,arg)=>{
+  loginWindow.close()
+  createMainWindow()
+  loginWindow = null
+})
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  loginWindow = new BrowserWindow({
+    width: 480, 
+    height: 800,
+    show:false,
+    autoHideMenuBar: true, 
+    webPreferences: {
+    javascript: true,
+    plugins: true,
+    nodeIntegration: false,
+    webSecurity: false,
+    preload: path.join(__dirname, './renderer.js') 
+  }})
 
   // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:8080')
-
+  loginWindow.loadURL('http://localhost:8080/login')
+  loginWindow.once('ready-to-show',()=>loginWindow.show())
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
-  mainWindow.on('closed', function () {
+  loginWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
+    loginWindow = null
     mainWindow = null
   })
 }
