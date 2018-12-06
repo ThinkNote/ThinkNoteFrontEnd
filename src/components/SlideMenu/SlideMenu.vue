@@ -16,10 +16,10 @@
     >
     <ul class="setting-items-list">
         <li class="setting-item">
-            设置1
+            导入
         </li>
         <li class="setting-item">
-            设置2
+            分享
         </li>
         <li class="setting-item">
             打印

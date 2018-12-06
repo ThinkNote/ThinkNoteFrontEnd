@@ -45,7 +45,7 @@ export default {
 .bar{
     height:100%;
 }
-.side-bar {
+.note-toolbar {
     height: 100%;
     width: 50px;
 }

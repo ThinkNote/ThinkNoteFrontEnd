@@ -1,6 +1,6 @@
 <template>
-<div class='side-bar'>
-    <table class="side-bar">
+<div class='note-side-bar'>
+    <table class="note-side-bar-table">
         <td class='bordered_td'>
             <tr>
                 <notebook abbr='物' color='green'></notebook>
@@ -29,7 +29,7 @@
                 <notepage title='Chapter2'></notepage>
             </tr>
             <tr>
-                <notepage title='Chapter34444444444444444444444444444444444444444'></notepage>
+                <notepage title='Chapter3'></notepage>
             </tr>
         </td>
     </table>
@@ -55,9 +55,13 @@ table td:first-child { border-left: none; }*/
     border-right: 2px solid;
     border-color: white;
 }
-.side-bar {
+.note-side-bar {
+    height: 100vh;
+    background-color: whitesmoke;
+}
+.note-side-bar-table
+{
     height: 100%;
-    width: 50px;
     background-color: whitesmoke;
 }
 .tool-icon-container {

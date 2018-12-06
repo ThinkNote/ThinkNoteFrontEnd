@@ -42,28 +42,23 @@ export default {
       ],
       rowsData: [
         {
-          fileName: "今天又是一个不能睡觉的夜晚.pptx",
+          fileName: "1-Chapter5-BasicProcessingUnit.pptx",
           fileStatus: "√",
           modifyDate: "2016-10-03"
         },
         {
-          fileName: "不仅要做UI.pptx",
+          fileName: "5-Chapter8-VM&Secondary.pptx",
           fileStatus: "X",
           modifyDate: "2016-10-03"
         },
         {
-          fileName: "还要写组件.pptx",
+          fileName: "3-Chapter8-BasicConcepts&RAM.pptx",
           fileStatus: "X",
           modifyDate: "2016-10-03"
         },
         {
-          fileName: "甚至还有作业.pptx",
+          fileName: "Lesson1-Chapter1-BasicSturcture.pptx",
           fileStatus: "X",
-          modifyDate: "2016-10-03"
-        },
-        {
-          fileName: "我要死了.pptx",
-          fileStatus: "√",
           modifyDate: "2016-10-03"
         }
       ]

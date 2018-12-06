@@ -5,8 +5,8 @@
     <h1 id="welcome" style="color:#fafafa;">{{ msg }}</h1>
         <div class="form-signin">
             <h1 style="padding-bottom:10px;color:#fafafa">Please sign in</h1>
-            <Input class="inputField" placeholder="Email address" required="" autofocus="" />
-            <Input class="inputField" placeholder="Password" required="" />
+            <Input type="email" class="inputField" placeholder="Email address" required="" autofocus="" />
+            <Input type="password" class="inputField" placeholder="Password" required="" />
             <Button type="primary" v-on:click="Login">Sign in</Button>
         </div>
   </div>
