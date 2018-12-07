@@ -10,7 +10,7 @@ import { note } from './components/note'
 import RouterMaps from './components/constraint/router-maps'
 import 'iview/dist/styles/iview.css'
 Vue.use(Router)
-
+// 加油吧前端的大哥们 
 var router = new Router({
   mode: 'history',
   routes: [
